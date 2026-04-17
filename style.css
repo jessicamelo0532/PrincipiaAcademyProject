@@ -1,0 +1,71 @@
+/* Configurações Globais */
+:root {
+    --primary: #2563eb; /* Azul principal */
+    --dark: #1e293b;    /* Cinza escuro para textos */
+    --light: #f8fafc;   /* Fundo claro */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+/* Navbar fixa no topo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Layout do Hero (Banner) */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+    min-height: 80vh;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #0f172a;
+    max-width: 600px;
+}
+
+/* Grid de Cursos */
+.grid-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.course-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Botões */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
