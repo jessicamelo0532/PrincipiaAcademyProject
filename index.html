@@ -1,52 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principia Academy | Física e Matemática</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Principia Academy | Física e Matemática Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="logo">P<span>Principia Academy</span></div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#cursos">Cursos</a></li>
                 <li><a href="#metodologia">Metodologia</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#contato" class="btn-cta">INSCREVA-SE</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Domine a Física e a Matemática.</h1>
-            <p>Com o método certo, qualquer aluno pode aprender ciências exatas.</p>
-            <div class="hero-btns">
-                <a href="#contato" class="btn-primary">INSCREVA-SE</a>
-                <a href="#cursos" class="btn-secondary">Ver Cursos</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="badge">Aulas 100% Online</span>
+                    <h1>Domine a Física e a Matemática.</h1>
+                    <p>Com o método certo, qualquer aluno pode aprender ciências exatas. Reforço escolar e preparação
+                        intensiva para o ENEM.</p>
+                    <div class="hero-actions">
+                        <a href="#contato" class="btn-primary">INSCREVA-SE</a>
+                        <a href="#cursos" class="btn-secondary">Ver Cursos</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="floating-card c1">E = mc²</div>
+                    <div class="floating-card c2">F = m · a</div>
+                    <div class="floating-card c3">∫ f(x)dx</div>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <section id="cursos" class="courses">
+        <div class="section-header">
+            <span class="badge">Nossos Cursos</span>
+            <h2>Escolha o curso ideal para você</h2>
+            <p>Do reforço escolar até a preparação intensiva para o ENEM.</p>
         </div>
-        <div class="hero-floating-cards">
-            <div class="card">F = m · a</div>
-            <div class="card">E = mc²</div>
+
+        <div class="grid-container">
+            <div class="course-card">
+                <div class="card-icon"><i data-lucide="book-open"></i></div>
+                <h3>Reforço Escolar</h3>
+                <p>Ensino Fundamental e Médio. Aulas individuais ou em pequenos grupos para dominar a base.</p>
+                <ul class="card-list">
+                    <li><i data-lucide="check"></i> Álgebra e Geometria</li>
+                    <li><i data-lucide="check"></i> Física Mecânica</li>
+                </ul>
+                <a href="#contato" class="btn-card">Saber mais</a>
+            </div>
+
+            <div class="course-card featured">
+                <div class="card-icon"><i data-lucide="target"></i></div>
+                <span class="mini-badge">Mais Popular</span>
+                <h3>Intensivo ENEM</h3>
+                <p>Foco total nas provas do ENEM e vestibulares. Resolução de questões e simulados.</p>
+                <ul class="card-list">
+                    <li><i data-lucide="check"></i> Física Moderna</li>
+                    <li><i data-lucide="check"></i> Cálculo Diferencial</li>
+                </ul>
+                <a href="#contato" class="btn-primary">Inscrever-se</a>
+            </div>
         </div>
     </section>
 
-    <section id="cursos" class="courses">
-        <h2>Escolha o curso ideal para você</h2>
-        <div class="grid-courses">
-            <div class="course-card">
-                <h3>Reforço Escolar</h3>
-                <p>Ensino Fundamental e Médio.</p>
-                <button>Saiba Mais</button>
+    <section id="metodologia" class="method">
+        <div class="section-header">
+            <h2>O método que transforma alunos em aprovados</h2>
+        </div>
+        <div class="method-steps">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h4>Diagnóstico</h4>
+                <p>Identificamos suas lacunas de conhecimento.</p>
             </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <h4>Fundamentos</h4>
+                <p>Construção da base teórica sólida.</p>
             </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <h4>Prática</h4>
+                <p>Resolução de exercícios progressivos.</p>
+            </div>
+        </div>
     </section>
+
+    <section id="sobre" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Nascemos do amor pela ciência e pelo ensino</h2>
+                <p>A <strong>Principia Academy</strong> foi fundada com uma missão simples: provar que qualquer aluno
+                    pode dominar Física e Matemática com o método certo.</p>
+                <blockquote>"Se você quer entender o universo, você precisa entender a linguagem em que ele foi escrito:
+                    a matemática." — Galileu Galilei</blockquote>
+            </div>
+            <div class="team-grid">
+                <div class="member">
+                    <img src="./assets/foto-professor.jpg" alt="Professor" class="avatar-img">
+                    <h4>José Paulo</h4>
+                    <span>Física — UFPA</span>
+                </div>
+                <div class="member">
+    <img src="./assets/foto-professor.jpg" alt="Professor" class="avatar-img">
+    <h4>José Paulo</h4>
+    <span>Física — UFPA</span>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Histórias reais de aprovação</h2>
+        <div class="testimonial-grid">
+            <div class="t-card">
+                <p>"Eu travava em Física. Depois de três meses aqui, resolvo qualquer questão do ENEM com confiança."
+                </p>
+                <div class="t-author">
+                    <strong>Ana Paula Souza</strong>
+                    <span>Aprovada em Engenharia — USP</span>
+                </div>
+            </div>
+            <div class="t-card">
+                <p>"Minha nota em Matemática foi de 600 para 950! Os professores explicam de um jeito que faz sentido."
+                </p>
+                <div class="t-author">
+                    <strong>Carlos Eduardo</strong>
+                    <span>Nota 950 no ENEM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h2>Pronto para começar?</h2>
+                <p>Preencha o formulário e entraremos em contato em até 24 horas.</p>
+                <div class="info-item"><i data-lucide="mail"></i> contato@principiaacademy.com.br</div>
+                <div class="info-item"><i data-lucide="phone"></i> +55 (11) 9 9999-0000</div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <select>
+                    <option>Selecione um curso</option>
+                    <option>Reforço Escolar</option>
+                    <option>Intensivo ENEM</option>
+                </select>
+                <textarea placeholder="Sua mensagem"></textarea>
+                <button type="submit" class="btn-primary">ENVIAR MENSAGEM</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">P<span>Principia Academy</span></div>
+                <p>Transformando o ensino de exatas no Brasil.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#home">Home</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Principia Academy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5591999999999" class="whatsapp-float" target="_blank">
+        <i data-lucide="message-circle"></i>
+        <span>Fale conosco</span>
+    </a>
 
     <script>lucide.createIcons();</script>
 </body>
+
 </html>
