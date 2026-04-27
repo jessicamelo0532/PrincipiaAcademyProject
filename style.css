@@ -1,15 +1,24 @@
 /* RESET E VARIÁVEIS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 :root {
     --bg-red: #8B0000;
     --gold-light: #e6ccb2;
     --gold-dark: #bfa38a;
     --white: #ffffff;
+    --text-slate: #8b6464;
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hidden; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: white; 
+    overflow-x: hidden; 
+}
 
 /* --- NAVBAR (FIXA COM GLASSMORFISMO) --- */
 .navbar {
@@ -17,16 +26,15 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     justify-content: space-between;
     align-items: center;
     padding: 20px 6%;
-    position: fixed; /* Fixa no topo */
+    position: fixed; 
     width: 100%;
     top: 0;
     z-index: 1000;
-    
-    /* Sugestão de fundo inteligente: Branco translúcido com desfoque */
     background: #f0ece2cc; 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: all 0.3s ease;
+    border-bottom: 1px #f0ece2cc;
 }
 
 .logo { display: flex; align-items: center; gap: 15px; }
@@ -43,7 +51,7 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     font-size: 1.5rem;
 }
 .logo-text { color: var(--bg-red); font-weight: 900; font-size: 1.6rem; }
-.logo-text span { color: #475569; font-weight: 400; opacity: 0.7; }
+.logo-text span { color: #000000; font-weight: 400; opacity: 0.7; }
 
 .nav-links { display: flex; list-style: none; align-items: center; gap: 30px; }
 .nav-links a { 
@@ -69,17 +77,10 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #f0ece2;
-    padding-top: 80px; /* Compensa a altura da navbar fixa */
-}
-
-.fundo-envelhecido {
-    position: absolute;
-    inset: 0;
-    background-image: url('./assets/fundo-papel.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+    background-color: #f0ece2; /* Cor do fundo de papel caso a imagem falhe */
+    padding-top: 100px;
+    padding-bottom: 120px; /* Aumentado para dar espaço para a onda */
+    overflow: visible; 
 }
 
 .corte-vermelho-organico {
@@ -94,6 +95,28 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     -webkit-mask-repeat: no-repeat;
 }
 
+/* --- ONDA (SHAPE DIVIDER) - CORREÇÃO DO "BURACO" --- */
+.wave-container {
+    position: absolute;
+    bottom: -50px; /* Cola exatamente no fundo da seção */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 10;
+}
+
+.wave-container svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px; /* Altura da onda */
+}
+
+.wave-path {
+    fill: var(--bg-red); /* Preenche a onda com a cor vinho */
+}
+
 .hero-container-template {
     position: relative;
     z-index: 3;
@@ -102,13 +125,12 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     align-items: center;
     width: 100%;
     max-width: 1300px;
-    margin: 10px auto 0;
+    margin: 0 auto;
     padding: 0 5%;
 }
 
 .hero-text { flex: 1; max-width: 650px; }
 
-/* Ajuste da Badge para ficar 1cm acima (margin-bottom) */
 .badge { 
     display: inline-block;
     background: var(--bg-red); 
@@ -116,7 +138,7 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     padding: 8px 16px; 
     border-radius: 50px; 
     font-weight: 700;
-    margin-bottom: 35px; /* Espaço adicionado aqui */
+    margin-bottom: 35px; 
 }
 
 .hero-text h1 {
@@ -125,7 +147,6 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    text-shadow: none !important;
 }
 
 .sombra-frase-1 {
@@ -154,7 +175,6 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     text-decoration: none;
 }
 
-/* Ajuste no botão Ver Cursos (Font-size aumentado) */
 .btn-secondary { 
     border: 2px solid var(--bg-red); 
     color: rgb(252, 224, 224); 
@@ -162,14 +182,13 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     border-radius: 50px; 
     font-weight: 900; 
     text-decoration: none;
-    font-size: 1.1rem; /* Fonte aumentada aqui */
+    font-size: 1.1rem;
 }
 
 .hero-visual-template { flex: 1; display: flex; justify-content: flex-end; }
 .maca-flutuante {
     width: clamp(280px, 35vw, 580px);
     height: auto;
-    margin-top: 30px;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
     animation: floatMaca 4s ease-in-out infinite;
 }
@@ -179,11 +198,152 @@ body { font-family: 'Inter', sans-serif; background-color: white; overflow-x: hi
     50% { transform: translateY(-40px); }
 }
 
-/* OUTRAS SEÇÕES */
-section { padding: 100px 8%; }
-.section-header { text-align: center; margin-bottom: 60px; }
-.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.course-card { background: white; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; }
+/* --- SEÇÃO DE CURSOS --- */
+.courses {
+    padding: 110px 8%;
+    background-color:  #f0ece2;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--bg-red);
+    margin: 15px 0;
+    font-weight: 900;
+}
+
+.section-header p {
+    color: #000000; /* Altera a cor (atualmente acinzentado) */
+    font-size: 1.1rem;        /* Altera o tamanho da fonte */
+    margin-bottom: 20px;      /* Altera o espaço abaixo da frase */
+    font-weight: 400;         /* Altera a espessura (400 é normal, 700 é negrito) */
+    line-height: 1.5;         /* Altera o espaçamento entre linhas */
+    margin: 15px 0 30px; /* Ajusta as margens para dar mais espaço entre o título e a descrição */
+}
+
+.badge-dark {
+    background: rgba(139, 0, 0, 0.1);
+    color: var(--bg-red);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: #fdfdfd;
+    padding: 30px 40px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.08);
+    border-color: var(--bg-red);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(139, 0, 0, 0.05);
+    color: var(--bg-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    color: var(--bg-red);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.course-card h4 {
+    font-size: 1.0rem;
+    color: #dbad4b;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.course-card p {
+    color: #44423d;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.card-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.card-features li {
+    display: flex;
+    align-items: center; gap: 10px;
+    color: #44423d;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.card-features i { color: #22c55e; }
+
+.btn-card {
+    text-align: center;
+    padding: 14px;
+    border-radius: 40px;
+    border: 2px solid #e2e8f0;
+    text-decoration: none;
+    color: var(--bg-red);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.course-card.featured {
+    background: var(--bg-red);
+    border-color: var(--bg-red);
+}
+
+.course-card.featured h3, 
+.course-card.featured p,
+.course-card.featured li {
+    color: white;
+}
+
+.btn-primary-card {
+    background: #dbad4b;
+    color: var(--bg-red);
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.card-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #dbad4b;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
 
 /* WHATSAPP */
 .whatsapp-float {
@@ -201,4 +361,19 @@ section { padding: 100px 8%; }
     font-weight: 800;
     z-index: 2000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 968px) {
+    .nav-links { display: none; }
+    .hero-container-template {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-actions { justify-content: center; }
+    .hero-visual-template {
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .maca-flutuante { width: 60vw; }
 }
