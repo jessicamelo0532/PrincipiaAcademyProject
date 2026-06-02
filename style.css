@@ -40,13 +40,12 @@ body {
 
 /* Estado após o Scroll: Cor sólida e Sombra sutil */
 .navbar.scrolled {
-    background: #f0ece2; /* Mesma cor sólida do seu código original */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil embaixo */
+    background: #f0ece2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil */
     border-bottom: 1px solid rgba(139, 0, 0, 0.05);
-    padding: 6px 6%; /* Leve redução na altura para um efeito elegante */
+    padding: 6px 6%;
 }
 
-/* Garantindo que o texto do logo e menu fiquem legíveis no fundo transparente */
 .navbar .logo-text, .navbar .nav-links a {
     transition: color 0.3s ease;
 }
@@ -91,9 +90,9 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #f0ece2; /* Cor do fundo de papel caso a imagem falhe */
+    background-color: #f0ece2;
     padding-top: 100px;
-    padding-bottom: 120px; /* Aumentado para dar espaço para a onda */
+    padding-bottom: 120px; 
     overflow: visible; 
 }
 
@@ -109,10 +108,10 @@ body {
     -webkit-mask-repeat: no-repeat;
 }
 
-/* --- ONDA (SHAPE DIVIDER) - CORREÇÃO DO "BURACO" --- */
+/* --- ONDA (SHAPE DIVIDER) --- */
 .wave-container {
     position: absolute;
-    bottom: -50px; /* Cola exatamente no fundo da seção */
+    bottom: -50px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -128,7 +127,7 @@ body {
 }
 
 .wave-path {
-    fill: var(--bg-red); /* Preenche a onda com a cor vinho */
+    fill: var(--bg-red);
 }
 
 .hero-container-template {
@@ -180,7 +179,7 @@ body {
 .hero-actions { display: flex; gap: 15px; }
 
 .btn-primary { 
-    background: #dbad4b; /* Ouro da sua paleta */
+    background: #dbad4b;
 ; 
     color: rgb(117, 2, 2); 
     padding: 15px 35px; 
@@ -227,12 +226,12 @@ body {
 }
 
 .section-header p {
-    color: #000000; /* Altera a cor (atualmente acinzentado) */
-    font-size: 1.1rem;        /* Altera o tamanho da fonte */
-    margin-bottom: 20px;      /* Altera o espaço abaixo da frase */
-    font-weight: 400;         /* Altera a espessura (400 é normal, 700 é negrito) */
-    line-height: 1.5;         /* Altera o espaçamento entre linhas */
-    margin: 15px 0 30px; /* Ajusta as margens para dar mais espaço entre o título e a descrição */
+    color: #000000; /* cor */
+    font-size: 1.1rem;        /* fonte */
+    margin-bottom: 20px;      /* espaço abaixo da frase */
+    font-weight: 400;         /* espessura */
+    line-height: 1.5;         /* espaçamento entre linhas */
+    margin: 15px 0 30px;
 }
 
 .badge-dark {
@@ -363,7 +362,7 @@ body {
 /* --- SEÇÃO METODOLOGIA --- */
 .method {
     padding: 100px 8%;
-    background-color: var(--bg-red); /* Fundo vinho como na imagem */
+    background-color: var(--bg-red); 
     color: white;
 }
 
@@ -573,7 +572,7 @@ body {
 }
 
 .mini-card {
-    background: #f0ece2; /* Bege muito claro do modelo */
+    background: #f0ece2;
     padding: 25px;
     border-radius: 20px;
     border: 1px solid #f3ebe0;
@@ -751,7 +750,7 @@ body {
 .btn-submit {
     width: 100%;
     padding: 18px;
-    background: #dbad4b; /* Cor dourada conforme imagem */
+    background: #dbad4b;
     color: var(--bg-red);
     border: none;
     border-radius: 50px;
@@ -829,8 +828,8 @@ body {
 
 /* --- RODAPÉ --- */
 .footer {
-    background-color: #1a0101; /* Vinho quase preto conforme imagem */
-    color: #a1a1aa; /* Cinza claro para os textos secundários */
+    background-color: #1a0101;
+    color: #a1a1aa;
     padding: 80px 8% 40px;
     font-family: 'Inter', sans-serif;
 }
